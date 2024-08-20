@@ -18,24 +18,13 @@
     "ios",
     "Charts"
   ],
-  "files": [
-    "android/src",
-    "android/build.gradle",
-    "android/gradle.properties",
-    "ios/**/*.h",
-    "ios/**/*.m",
-    "ios/**/*.swift",
-    "lib",
-    "index.js",
-    "react-native-charts-wrapper.podspec",
-    "ios/ReactNativeCharts/ReactNativeCharts.xcodeproj/project.pbxproj"
-  ],
   "dependencies": {
     "deprecated-react-native-prop-types": "^2.3.0",
     "prop-types": "^15.8.1",
     "react": "16.13.1"
   },
   "harmony": {
+    "alias": "react-native-charts-wrapper",
     "codegenConfig": {
         "specPaths": [
             "./src"
