@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "Charts_wrapperAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "Charts_wrapperAbility_label",
+      "value": "label"
+    }
+  ]
+}

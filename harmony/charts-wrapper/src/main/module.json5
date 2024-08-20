@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "charts_wrapper",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet",
+      "2in1"
+    ]
+  }
+}

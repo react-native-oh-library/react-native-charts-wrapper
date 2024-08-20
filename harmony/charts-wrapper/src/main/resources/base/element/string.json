@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "Charts_wrapperAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "Charts_wrapperAbility_label",
+      "value": "label"
+    }
+  ]
+}

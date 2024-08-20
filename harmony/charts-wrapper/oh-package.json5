@@ -1,0 +1,13 @@
+{
+  "name": "@react-native-oh-tpl/react-native-charts-wrapper",
+  "version": "0.6.0-0.0.1",
+  "description": "Please describe the basic information.",
+  "main": "ts.ts",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@rnoh/react-native-openharmony": 'file:../react_native_openharmony',
+  }
+
+}
+
