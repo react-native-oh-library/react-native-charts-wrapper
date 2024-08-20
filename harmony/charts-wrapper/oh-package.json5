@@ -2,7 +2,7 @@
   "name": "@react-native-oh-tpl/react-native-charts-wrapper",
   "version": "0.6.0-0.0.1",
   "description": "Please describe the basic information.",
-  "main": "ts.ts",
+  "main": "Index.ets",
   "author": "",
   "license": "",
   "dependencies": {
