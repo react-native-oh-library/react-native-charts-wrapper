@@ -152,27 +152,6 @@ export const setPieData = (descriptorWrapper: RNC.RNPieChart.DescriptorWrapper):
       dataSet.setValueLineVariableLength(config.valueLineVariableLength);
     }
 
-    //添加颜色
-    let colors: JArrayList<number> = new JArrayList();
-    for (let index = 0; index < ColorTemplate.VORDIPLOM_COLORS.length; index++) {
-      colors.add(ColorTemplate.VORDIPLOM_COLORS[index]);
-    }
-
-    for (let index = 0; index < ColorTemplate.JOYFUL_COLORS.length; index++) {
-      colors.add(ColorTemplate.JOYFUL_COLORS[index]);
-    }
-
-    for (let index = 0; index < ColorTemplate.COLORFUL_COLORS.length; index++) {
-      colors.add(ColorTemplate.COLORFUL_COLORS[index]);
-    }
-    for (let index = 0; index < ColorTemplate.LIBERTY_COLORS.length; index++) {
-      colors.add(ColorTemplate.LIBERTY_COLORS[index]);
-    }
-    for (let index = 0; index < ColorTemplate.PASTEL_COLORS.length; index++) {
-      colors.add(ColorTemplate.PASTEL_COLORS[index]);
-    }
-    colors.add(ColorTemplate.getHoloBlue());
-    dataSet.setColorsByList(colors);
 
   })
   let pieData = new PieData(dataSet)

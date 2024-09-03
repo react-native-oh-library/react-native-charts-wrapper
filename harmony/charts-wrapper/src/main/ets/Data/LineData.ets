@@ -38,13 +38,13 @@ export const setLineData = (isLine: string, descriptorWrapper: RNC.RNLineChart.D
   ComDescriptorWrapper?: RNC.RNCombinedChart.DescriptorWrapper, CombinedData?: CombinedData): LineData | null => {
 
   let dataSetList: JArrayList<ILineDataSet> = new JArrayList<ILineDataSet>();
-  let values: JArrayList<EntryOhos> = new JArrayList<EntryOhos>();
   let label: string | undefined
 
 
   if (descriptorWrapper && isLine === 'Line') {
     let dataSetProps = descriptorWrapper.props.data;
     dataSetProps.dataSets?.forEach((data) => {
+      let values: JArrayList<EntryOhos> = new JArrayList<EntryOhos>();
       data.values?.forEach((v) => {
         values.add(new EntryOhos(v.x, v.y));
       })
@@ -177,12 +177,6 @@ export const setLineData = (isLine: string, descriptorWrapper: RNC.RNLineChart.D
       if (config?.drawHighlightIndicators != undefined) {
         dataSet.setDrawHighlightIndicators(config?.drawHighlightIndicators)
       }
-
-      // if(config?.fillGradient!=undefined){
-      //
-      // }
-
-      // dataSet.setGradientFillColor(gradientFillColor)
 
 
       dataSetList.add(dataSet);
@@ -190,6 +184,7 @@ export const setLineData = (isLine: string, descriptorWrapper: RNC.RNLineChart.D
   } else {
     let dataSetComProps = ComDescriptorWrapper?.props.data?.lineData
     dataSetComProps?.dataSets?.forEach((data) => {
+      let values: JArrayList<EntryOhos> = new JArrayList<EntryOhos>();
       data.values?.forEach((v) => {
         values.add(new EntryOhos(v.x, v.y));
       })
@@ -322,11 +317,6 @@ export const setLineData = (isLine: string, descriptorWrapper: RNC.RNLineChart.D
         dataSet.setDrawHighlightIndicators(config?.drawHighlightIndicators)
       }
 
-      // if(config?.fillGradient!=undefined){
-      //
-      // }
-
-      // dataSet.setGradientFillColor(gradientFillColor)
 
 
       dataSetList.add(dataSet);

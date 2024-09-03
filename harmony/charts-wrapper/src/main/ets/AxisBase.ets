@@ -473,18 +473,4 @@ export const setAxis =
         axis?.setCenterAxisLabels(xAxis?.centerAxisLabels)
       }
     }
-
-    //参数有问题
-    // if(props.xAxis?.fontFamily){
-    //   axis?.setTypeface(props.xAxis.fontFamily);
-    // }
-
-
-    //ohos Charts未支持 LargeValueFormatter
-    // if(props.xAxis?.valueFormatter){
-    //   let valueForMatter = props.xAxis.valueFormatter;
-    //   // axis?.setValueFormatter(new LargeValueFormatter())
-    // }
-    //since 未找到
-    //timeUnit 未找到
   }

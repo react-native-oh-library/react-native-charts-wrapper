@@ -87,11 +87,6 @@ export const setBubbleData = (isBubble: string, descriptorWrapper: RNC.RNBubbleC
       if (config?.visible != undefined) {
         dataSet.setVisible(config.visible);
       }
-      // 参数有点问题  valueFormatter
-      // if(config?.valueFormatter === 'largeValue'){
-      //   dataSet.setValueFormatter(IValueFormatter);
-      //
-      // }
 
       //设置轴依赖关系 axisDependency
       if (config?.axisDependency === 'LEFT') {
