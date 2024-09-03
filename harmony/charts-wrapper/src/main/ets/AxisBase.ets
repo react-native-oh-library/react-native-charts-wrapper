@@ -130,6 +130,38 @@ export const setAxis =
         axis.setGridLineWidth(yAxisRight?.gridLineWidth)
       }
 
+      if (axis instanceof XAxis && xAxis?.fontFamily != undefined) {
+        if (xAxis.fontFamily === 'sans-serif') {
+          axis.setTypeface(xAxis.fontFamily)
+        }
+        if (xAxis.fontFamily === 'serif') {
+          axis.setTypeface(xAxis.fontFamily)
+        }
+        if (xAxis.fontFamily === 'monospace') {
+          axis.setTypeface(xAxis.fontFamily)
+        }
+      } else if (yAxisLeft?.gridLineWidth != undefined && isyAxis === 'yAxisLeft') {
+        if (yAxisLeft.fontFamily === 'sans-serif') {
+          axis.setTypeface(yAxisLeft.fontFamily)
+        }
+        if (yAxisLeft.fontFamily === 'serif') {
+          axis.setTypeface(yAxisLeft.fontFamily)
+        }
+        if (yAxisLeft.fontFamily === 'monospace') {
+          axis.setTypeface(yAxisLeft.fontFamily)
+        }
+      } else if (yAxisRight?.gridLineWidth != undefined && isyAxis === 'yAxisRight') {
+        if (yAxisRight.fontFamily === 'sans-serif') {
+          axis.setTypeface(yAxisRight.fontFamily)
+        }
+        if (yAxisRight.fontFamily === 'serif') {
+          axis.setTypeface(yAxisRight.fontFamily)
+        }
+        if (yAxisRight.fontFamily === 'monospace') {
+          axis.setTypeface(yAxisRight.fontFamily)
+        }
+      }
+
       //设置图表周围边框的颜色。axisLineColor
       if (axis instanceof XAxis && xAxis?.axisLineColor != undefined) {
         axis?.setAxisLineColor(xAxis?.axisLineColor);
@@ -184,8 +216,6 @@ export const setAxis =
         if (i.valueTextColor) {
           limitLine.setTextColor(i.valueTextColor);
         }
-        // fontFamily
-        // 参数还需研究
         if (i.labelPosition) {
           if (i.labelPosition === 'LEFT_TOP') {
             limitLine.setLabelPosition(LimitLabelPosition.LEFT_TOP)
@@ -218,20 +248,20 @@ export const setAxis =
 
       // 设置轴的最大标签数 axisMaximum
       if (axis instanceof XAxis && xAxis?.axisMaximum != undefined) {
-        axis?.setAxisMaxLabels(xAxis?.axisMaximum);
+        axis?.setAxisMaximum(xAxis?.axisMaximum);
       } else if (yAxisLeft?.axisMaximum != undefined && isyAxis === 'yAxisLeft') {
-        axis?.setAxisMaxLabels(yAxisLeft?.axisMaximum);
+        axis?.setAxisMaximum(yAxisLeft?.axisMaximum);
       } else if (yAxisRight?.axisMaximum != undefined && isyAxis === 'yAxisRight') {
-        axis?.setAxisMaxLabels(yAxisRight?.axisMaximum);
+        axis?.setAxisMaximum(yAxisRight?.axisMaximum);
       }
 
       //设置轴的最小标签数 axisMinimum
       if (axis instanceof XAxis && xAxis?.axisMinimum != undefined) {
-        axis?.setAxisMinLabels(xAxis?.axisMinimum);
+        axis?.setAxisMinimum(xAxis?.axisMinimum);
       } else if (yAxisLeft?.axisMinimum != undefined && isyAxis === 'yAxisLeft') {
-        axis?.setAxisMinLabels(yAxisLeft?.axisMinimum);
+        axis?.setAxisMinimum(yAxisLeft?.axisMinimum);
       } else if (yAxisRight?.axisMinimum != undefined && isyAxis === 'yAxisRight') {
-        axis?.setAxisMinLabels(yAxisRight?.axisMinimum);
+        axis?.setAxisMinimum(yAxisRight?.axisMinimum);
       }
 
       // 设置轴放大时的最小间隔 granularity
@@ -281,7 +311,6 @@ export const setAxis =
       } else if (yAxisRight?.centerAxisLabels != undefined && isyAxis === 'yAxisRight') {
         axis?.setCenterAxisLabels(yAxisRight?.centerAxisLabels);
       }
-
     } else {
 
       let xAxis = isRadarCharts?.props.xAxis
@@ -374,8 +403,6 @@ export const setAxis =
         if (i.valueTextColor) {
           limitLine.setTextColor(i.valueTextColor);
         }
-        // fontFamily
-        // 参数还需研究
         if (i.labelPosition) {
           if (i.labelPosition === 'LEFT_TOP') {
             limitLine.setLabelPosition(LimitLabelPosition.LEFT_TOP)
