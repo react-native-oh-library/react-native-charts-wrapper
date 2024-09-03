@@ -189,9 +189,6 @@ export const setBaseProps =
         legend?.setDirection(LegendDirection.LEFT_TO_RIGHT);
       }
 
-      // 参数有差异
-      // legend.setTypeface(props.legend?.fontFamily)\
-
       //设置图例形式的形式/形状 from
       if (props.legend?.form === "NONE") {
         legend?.setForm(LegendForm.NONE);

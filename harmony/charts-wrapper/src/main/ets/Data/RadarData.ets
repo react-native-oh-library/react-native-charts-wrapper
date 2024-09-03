@@ -23,9 +23,12 @@
  */
 
 
-import { AxisDependency, IRadarDataSet, JArrayList, RadarData, RadarDataSet, RadarEntry } from '@ohos/mpchart';
+import {
+  AxisBase,
+  AxisDependency,
+  IAxisValueFormatter,
+  IRadarDataSet, JArrayList, RadarData, RadarDataSet, RadarEntry } from '@ohos/mpchart';
 import { RNC } from '@rnoh/react-native-openharmony/generated';
-
 export const setRadarData = (descriptorWrapper: RNC.RNRadarChart.DescriptorWrapper): RadarData | null => {
   //判断Props data 是否为空
   if (!descriptorWrapper.props.data) {
@@ -79,11 +82,6 @@ export const setRadarData = (descriptorWrapper: RNC.RNRadarChart.DescriptorWrapp
     if (config?.visible != undefined) {
       dataSet.setVisible(config.visible);
     }
-    // 参数有点问题  valueFormatter
-    // if(config?.valueFormatter === 'largeValue'){
-    //   dataSet.setValueFormatter(IValueFormatter);
-    //
-    // }
 
     //设置轴依赖关系 axisDependency
     if (config?.axisDependency === 'LEFT') {
