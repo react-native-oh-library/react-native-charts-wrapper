@@ -71,7 +71,10 @@ export const setBarLineChart = <T extends model, U extends RNChart>(descriptorWr
   if (props.gridBackgroundColor != undefined) {
     model.setGridBackgroundColor(props.gridBackgroundColor)
   }
-
+  //设置图表背景 chartBackgroundColor
+  if(props.chartBackgroundColor!=undefined){
+    model.setGridBackgroundColor(props.chartBackgroundColor)
+  }
   //是否设置边框 drawBorders
   if (props.drawBorders != undefined) {
     model.setDrawBorders(props.drawBorders);

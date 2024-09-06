@@ -31,6 +31,8 @@ import {
   IAxisValueFormatter,
   AxisBase,
   ChartColor,
+  XAxis,
+  XAxisPosition,
 } from '@ohos/mpchart';
 import { RNC } from "@rnoh/react-native-openharmony/generated"
 import { setBaseProps } from './BaseCharts'
@@ -38,14 +40,6 @@ import { setRadarData } from './Data/RadarData';
 import { setBasePieChartProps } from './BasePieCharts';
 import { setAxis } from './AxisBase';
 import RadarMarkerView from './utils/RadarMarkerView';
-
-class valueFormatter implements IAxisValueFormatter {
-  private mActivities: string[] = ["Burger", "Steak", "Salad", "Pasta", "Pizza"];
-
-  getFormattedValue(value: number, axis: AxisBase): string {
-    return this.mActivities[Math.floor(value % this.mActivities.length)];
-  }
-}
 
 @Component
 export struct RadarCharts {
