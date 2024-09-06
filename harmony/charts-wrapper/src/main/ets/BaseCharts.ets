@@ -43,6 +43,8 @@ import {
   HorizontalBarChartModel,
   LegendEntry,
   JArrayList,
+  IAxisValueFormatter,
+  AxisBase,
 } from '@ohos/mpchart';
 import { RNC } from "@rnoh/react-native-openharmony/generated"
 import { setAxis } from './AxisBase';
@@ -254,9 +256,6 @@ export const setBaseProps =
       model.setLogEnabled(props.logEnabled)
     }
 
-
-    //chartBackgroundColor  暂无这个方法
-
     //设置高亮 highlightPerTapEnabled
     if (props.highlightPerTapEnabled != undefined) {
       model.setHighlightPerTapEnabled(props.highlightPerTapEnabled);
@@ -327,14 +326,14 @@ export const setBaseProps =
         xAxis?.setYOffset(props.xAxis.yOffset)
       }
 
-      if (props.highlights) {
-        props.highlights.forEach((highlight) => {
-          let x = highlight.x;
-          let dataSetIndex = highlight.dataSetIndex;
-          let stackIndex = highlight.stackIndex;
-          model.highlightValue(x, dataSetIndex, stackIndex)
-        })
-      }
     }
-
+    if (props.highlights != undefined) {
+      props.highlights.forEach((highlight) => {
+        let x = highlight.x;
+        let dataSetIndex = highlight.dataSetIndex;
+        let stackIndex = highlight.stackIndex;
+        model.highlightValue(x, dataSetIndex, stackIndex)
+      })
+    }
   }
+

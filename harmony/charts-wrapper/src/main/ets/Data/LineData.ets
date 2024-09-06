@@ -30,7 +30,8 @@ import {
   LineData,
   LineDataSet,
   Mode,
-  CombinedData
+  CombinedData,
+  ChartColorStop
 } from '@ohos/mpchart';
 import { RNC } from '@rnoh/react-native-openharmony/generated';
 
@@ -178,6 +179,19 @@ export const setLineData = (isLine: string, descriptorWrapper: RNC.RNLineChart.D
         dataSet.setDrawHighlightIndicators(config?.drawHighlightIndicators)
       }
 
+      //  设置折线宽度，以vp为单位 lineWidth
+      if (config?.lineWidth != undefined) {
+        dataSet.setLineWidth(config.lineWidth);
+      }
+
+      //设置填充 fillFormatter
+      if(config?.drawFilled && config.fillColor!=undefined){
+       let gradientFillColor = new JArrayList<ChartColorStop>();
+       let fillColor = config.fillColor.toString();
+       gradientFillColor.add([fillColor,config.fillAlpha]);
+       dataSet.setGradientFillColor(gradientFillColor);
+       dataSet.setDrawFilled(config.drawFilled)
+      }
 
       dataSetList.add(dataSet);
     })
@@ -315,6 +329,19 @@ export const setLineData = (isLine: string, descriptorWrapper: RNC.RNLineChart.D
       //drawHighlightIndicators 启用/禁用垂直和水平突出显示指示器。
       if (config?.drawHighlightIndicators != undefined) {
         dataSet.setDrawHighlightIndicators(config?.drawHighlightIndicators)
+      }
+      //  设置折线宽度，以vp为单位 lineWidth
+      if (config?.lineWidth != undefined) {
+        dataSet.setLineWidth(config.lineWidth);
+      }
+
+      //设置填充 fillFormatter
+      if(config?.drawFilled && config.fillColor!=undefined){
+        let gradientFillColor = new JArrayList<ChartColorStop>();
+        let fillColor = config.fillColor.toString();
+        gradientFillColor.add([fillColor,config.fillAlpha]);
+        dataSet.setGradientFillColor(gradientFillColor);
+        dataSet.setDrawFilled(config.drawFilled)
       }
 
 
