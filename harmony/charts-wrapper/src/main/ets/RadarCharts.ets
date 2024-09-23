@@ -126,10 +126,8 @@ export struct RadarCharts {
   }
 
   build() {
-    RNViewBase({ ctx: this.ctx, tag: this.tag }) {
       RadarChart({
         model: this.model
       })
-    }
   }
 }

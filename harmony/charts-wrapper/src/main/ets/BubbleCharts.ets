@@ -70,10 +70,8 @@ export struct BubbleCharts {
   }
 
   build() {
-    RNViewBase({ ctx: this.ctx, tag: this.tag }) {
       BubbleChart({
         model: this.model
       })
-    }
   }
 }

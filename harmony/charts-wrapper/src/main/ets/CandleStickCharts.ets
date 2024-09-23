@@ -76,10 +76,8 @@ export struct CandleStickCharts {
   }
 
   build() {
-    RNViewBase({ ctx: this.ctx, tag: this.tag }) {
       CandleStickChart({
         model: this.model
       })
-    }
   }
 }

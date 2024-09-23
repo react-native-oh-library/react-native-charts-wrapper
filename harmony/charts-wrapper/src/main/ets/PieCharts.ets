@@ -161,10 +161,8 @@ export struct PieCharts {
   }
 
   build() {
-    RNViewBase({ ctx: this.ctx, tag: this.tag }) {
       PieChart({
         model: this.model
       })
-    }
   }
 }

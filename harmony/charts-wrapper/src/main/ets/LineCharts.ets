@@ -71,10 +71,8 @@ export struct LineCharts {
   }
 
   build() {
-    RNViewBase({ ctx: this.ctx, tag: this.tag }) {
       LineChart({
         model: this.model
       })
-    }
   }
 }

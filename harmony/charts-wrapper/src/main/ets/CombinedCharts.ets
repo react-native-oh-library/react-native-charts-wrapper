@@ -110,10 +110,8 @@ export struct CombinedCharts {
   }
 
   build() {
-    RNViewBase({ ctx: this.ctx, tag: this.tag }) {
       CombinedChart({
         model: this.model
       })
-    }
   }
 }
