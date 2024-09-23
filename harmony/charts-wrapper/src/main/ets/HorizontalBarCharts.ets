@@ -72,10 +72,8 @@ export struct HorizontalBarCharts {
   }
 
   build() {
-    RNViewBase({ ctx: this.ctx, tag: this.tag }) {
       HorizontalBarChart({
         model: this.model
       })
-    }
   }
 }

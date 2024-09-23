@@ -89,10 +89,8 @@ export struct BarCharts {
   }
 
   build() {
-    RNViewBase({ ctx: this.ctx, tag: this.tag }) {
       BarChart({
         model: this.model
       })
-    }
   }
 }

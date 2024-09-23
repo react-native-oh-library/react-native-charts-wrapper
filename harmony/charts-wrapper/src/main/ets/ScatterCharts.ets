@@ -68,10 +68,8 @@ export struct ScatterCharts {
   }
 
   build() {
-    RNViewBase({ ctx: this.ctx, tag: this.tag }) {
       ScatterChart({
         model: this.model
       })
-    }
   }
 }

@@ -172,7 +172,7 @@ export const setAxis =
       }
 
       //设置图表周围边框的宽度，单位为vp。 axisLineWidth
-      if (xAxis instanceof XAxis && xAxis?.axisLineWidth != undefined) {
+      if (axis instanceof XAxis && xAxis?.axisLineWidth != undefined) {
         axis?.setAxisLineWidth(xAxis?.axisLineWidth);
       } else if (yAxisLeft?.axisLineWidth != undefined && isyAxis === 'yAxisLeft') {
         axis?.setAxisLineWidth(yAxisLeft?.axisLineWidth);
