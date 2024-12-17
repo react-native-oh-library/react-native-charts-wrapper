@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "react-native-charts-wrapper",
+        "License": "MIT",
+        "License File": "https://github.com/wuxudong/react-native-charts-wrapper?tab=readme-ov-file#license",
+        "Version Number": "0.6.0",
+		"Owner" : "xiafeng@huawei.com",
+        "Upstream URL": "https://github.com/wuxudong/react-native-charts-wrapper",
+        "Description": "A react-native charts support both android and iOS"
+    }
+]
