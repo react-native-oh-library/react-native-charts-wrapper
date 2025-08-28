@@ -1,5 +1,5 @@
 import {
-    HostComponent,
+    HostComponent,ViewProps
   } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -202,7 +202,7 @@ interface styledCenterTextType {
     size?: Float ;
     fontFamily?: FontFamily ;
 }
-export interface PieChartProps extends PieRadarChartBase{
+export interface PieChartProps extends ViewProps, PieRadarChartBase{
     drawEntryLabels?: boolean ;
     usePercentValues?: boolean ;
 

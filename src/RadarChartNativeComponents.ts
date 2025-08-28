@@ -1,5 +1,5 @@
 import {
-    HostComponent,
+    HostComponent,ViewProps
   } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -232,7 +232,7 @@ export interface yAxis extends Axis {
 
     zeroLine?:zeroLineType
 }
-export interface RadarChartProps extends PieRadarChartBase{
+export interface RadarChartProps extends ViewProps, PieRadarChartBase{
     yAxis?: yAxis ;
 
     drawWeb?: boolean ;

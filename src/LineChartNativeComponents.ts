@@ -1,5 +1,5 @@
 import {
-    HostComponent,
+    HostComponent,ViewProps
   } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -309,7 +309,7 @@ export interface LineDataset extends Dataset {
 export interface LineData {
     dataSets?: LineDataset[] ;
 }
-export interface LineChartProps extends BarLineChartBase{
+export interface LineChartProps extends ViewProps,BarLineChartBase{
     data: LineData;
   }
 
