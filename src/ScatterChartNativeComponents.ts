@@ -1,5 +1,5 @@
 import {
-    HostComponent,
+    HostComponent,ViewProps
   } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -293,7 +293,7 @@ export interface ScatterDataset extends Dataset {
 export interface ScatterData {
     dataSets: ScatterDataset[];
 }
-export interface ScatterChartProps extends BarLineChartBase{
+export interface ScatterChartProps extends ViewProps, BarLineChartBase{
     data: ScatterData;
   }
 

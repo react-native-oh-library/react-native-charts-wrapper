@@ -1,5 +1,5 @@
 import {
-    HostComponent,
+    HostComponent,ViewProps
 } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -440,7 +440,7 @@ type DrawOrderType = "BAR" | "BUBBLE" | "LINE" | "CANDLE" | "SCATTER"
 
 type DrawOrderTypeArr = DrawOrderType[]
 
-export interface CombinedChartProps extends BarLineChartBase {
+export interface CombinedChartProps extends ViewProps, BarLineChartBase {
     drawOrder?: WithDefault<DrawOrderTypeArr, 'BAR'>;
     drawValueAboveBar?: boolean ;
     highlightFullBarEnabled?: boolean ;

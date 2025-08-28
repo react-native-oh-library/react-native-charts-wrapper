@@ -1,5 +1,5 @@
 import {
-    HostComponent,
+    HostComponent,ViewProps
   } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -287,7 +287,7 @@ export interface CandleStickDataset extends Dataset {
 export interface CandleStickData {
     dataSets?: CandleStickDataset[] ;
 }
-export interface CandleStickChartProps extends BarLineChartBase{
+export interface CandleStickChartProps extends ViewProps, BarLineChartBase{
     data: CandleStickData;
   }
 

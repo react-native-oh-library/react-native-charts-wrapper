@@ -1,5 +1,5 @@
 import {
-    HostComponent,
+    HostComponent,ViewProps
   } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -267,7 +267,7 @@ export interface BubbleDataset extends Dataset {
 export interface BubbleData {
     dataSets?: BubbleDataset[] ;
 }
-export interface BubbleChartProps extends BarLineChartBase{
+export interface BubbleChartProps extends ViewProps, BarLineChartBase{
     data: BubbleData;
   }
 

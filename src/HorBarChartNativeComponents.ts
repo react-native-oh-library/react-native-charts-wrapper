@@ -1,5 +1,5 @@
 import {
-    HostComponent,
+    HostComponent,ViewProps
   } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -273,7 +273,7 @@ export interface BarData {
 
     config?:configType;
 }
-export interface HorizontalBarChartProps extends BarLineChartBase{
+export interface HorizontalBarChartProps extends ViewProps, BarLineChartBase{
     drawValueAboveBar?: boolean;
     drawBarShadow?: boolean;
     highlightFullBarEnabled?: boolean;
