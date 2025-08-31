@@ -1,4 +1,4 @@
-# @react-native-oh-tpl/react-native-charts-wrapper
+# @react-native-ohos/react-native-charts-wrapper
 本项目基于 [react-native-charts-wrapper](https://github.com/wuxudong/react-native-charts-wrapper)
 
 ## 文档地址 / Documentation URL 
