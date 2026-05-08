@@ -46,7 +46,7 @@ import {
   IAxisValueFormatter,
   AxisBase,
 } from '@ohos/mpchart';
-import { RNC } from "@rnoh/react-native-openharmony/generated"
+import { RNC } from './generated'
 import { setAxis } from './AxisBase';
 
 type model = BarChartModel |

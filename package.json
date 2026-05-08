@@ -18,17 +18,22 @@
     "ios",
     "Charts"
   ],
+  "scripts": {
+ 	  "codegen-lib": "react-native codegen-lib-harmony --no-safety-check --npm-package-name react-native-charts-wrapper --cpp-output-path ./harmony/charts-wrapper/src/main/cpp/generated --ets-output-path ./harmony/charts-wrapper/src/main/ets/generated --turbo-modules-spec-paths ./src --arkts-components-spec-paths ./src"
+ 	},
   "dependencies": {
     "deprecated-react-native-prop-types": "^2.3.0",
     "prop-types": "^15.8.1",
-    "react": "16.13.1"
+    "react": "19.1.1"
   },
+  
   "harmony": {
     "alias": "react-native-charts-wrapper",
-    "codegenConfig": {
-        "specPaths": [
-            "./src"
-        ]
-    }
+    "autolinking": {
+ 	       "etsPackageClassName":"ChartsWrapperPackage",
+ 	       "cppPackageClassName":"ChartsWrapperPackage",
+ 	       "cmakeLibraryTargetName": "rnoh_charts_wrapper", 
+ 	       "ohPackageName": "@react-native-ohos/react-native-charts-wrapper"
+ 	  }
   }
 }

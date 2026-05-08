@@ -32,7 +32,7 @@ interface ILimitLines {
   lineWidth?: number | undefined,
   valueTextColor?: number | undefined,
   valueFont?: number | undefined,
-  labelPosition?: 'LEFT_TOP' | 'LEFT_BOTTOM' | 'RIGHT_TOP' | 'RIGHT_BOTTOM' | undefined,
+  labelPosition?: string | undefined,
   lineDashPhase?: number | undefined,
   lineDashLengths?: number[] | undefined
 }
