@@ -24,7 +24,7 @@
 
 import { RNComponentContext, RNViewBase } from '@rnoh/react-native-openharmony';
 import { ScatterChartModel, ScatterChart, ScatterData, } from '@ohos/mpchart';
-import { RNC } from "@rnoh/react-native-openharmony/generated"
+import { RNC } from './generated'
 import { setBaseProps } from './BaseCharts'
 import { setScatterData } from './Data/ScatterData';
 import { setBarLineChart } from './BarLineBaseChart';

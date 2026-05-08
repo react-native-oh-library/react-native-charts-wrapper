@@ -24,7 +24,7 @@
 
 import { RNComponentContext, RNViewBase } from '@rnoh/react-native-openharmony';
 import { PieChartModel, PieData, PieChart, } from '@ohos/mpchart';
-import { RNC } from "@rnoh/react-native-openharmony/generated"
+import { RNC } from './generated'
 import { setBaseProps } from './BaseCharts'
 import { setPieData } from './Data/PieData';
 import { setBasePieChartProps } from './BasePieCharts';

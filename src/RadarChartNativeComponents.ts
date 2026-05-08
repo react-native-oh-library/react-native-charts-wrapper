@@ -1,5 +1,6 @@
 import {
-    HostComponent,ViewProps
+    HostComponent,
+    ViewProps,
   } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -19,7 +20,7 @@ export interface ChartDescription {
     positionX?: Float;
     positionY?: Float;
 }
-type FontFamily = WithDefault<'sans-serif' | 'serif' | 'monospace','san-serif'>;
+type FontFamily = WithDefault<string,'sans-serif'>;
 export interface ChartLegend {
     enabled?: boolean;
     textColor?: Color;
@@ -29,12 +30,12 @@ export interface ChartLegend {
     fontWeight?: Float;
     wordWrapEnabled?: boolean;
     maxSizePercent?: Float;
-    horizontalAlignment?:WithDefault<"LEFT" | "CENTER" | "RIGHT",'LEFT'> ;
-    verticalAlignment?:WithDefault<"TOP" | "CENTER" | "BOTTOM",'TOP'>;
-    orientation?:WithDefault<"HORIZONTAL" | "VERTICAL","HORIZONTAL"> ;
+    horizontalAlignment?:WithDefault<string,'LEFT'> ;
+    verticalAlignment?:WithDefault<string,'TOP'>;
+    orientation?:WithDefault<string,"HORIZONTAL"> ;
     drawInside?: boolean;
-    direction?: WithDefault<"LEFT_TO_RIGHT" | "RIGHT_TO_LEFT",'LEFT_TO_RIGHT'>;
-    form?:WithDefault<"NONE" | "EMPTY" | "DEFAULT" | "SQUARE" | "CIRCLE" | "LINE","NONE"> ;
+    direction?: WithDefault<string,'LEFT_TO_RIGHT'>;
+    form?:WithDefault<string,"NONE"> ;
     formSize?: Float;
     xEntrySpace?: Float;
     yEntrySpace?: Float;
@@ -58,7 +59,7 @@ export interface AxisLimitLine {
     lineWidth?: Float;
     valueTextColor?: Color;
     valueFont?: Float;
-    labelPosition?:WithDefault<"LEFT_TOP" | "LEFT_BOTTOM" | "RIGHT_TOP" | "RIGHT_BOTTOM",'LEFT_TOP'> ;
+    labelPosition?:WithDefault<string ,'LEFT_TOP'> ;
     lineDashPhase?: Float;
     lineDashLengths?: Float[];
 }
@@ -96,14 +97,14 @@ export interface Axis {
 
     valueFormatterPattern?: string;
     since?: Float;
-    timeUnit?:WithDefault<"MILLISECONDS" | "SECONDS" | "MINUTES" | "HOURS" | "DAYS",'MILLISECONDS'> ;
+    timeUnit?:WithDefault<string,'MILLISECONDS'> ;
 }
 
 
 export interface xAxis extends Axis {
     labelRotationAngle?: Float;
     avoidFirstLastClipping?: boolean;
-    position?:WithDefault<"TOP" | "BOTTOM" | "BOTH_SIDED" | "TOP_INSIDE" | "BOTTOM_INSIDE",'TOP'> ;
+    position?:WithDefault<string,'TOP'> ;
     yOffset?: Float;
 }
 interface markerType{
@@ -164,8 +165,8 @@ export interface CommonDatasetConfig {
     valueTextSize?: Float;
     valueTextColor?: Color;
     visible?: boolean;
-    valueFormatter?:WithDefault<"largeValue" | "percent" | "date",'largeValue'>;
-    axisDependency?:WithDefault< "LEFT" | "RIGHT",'LEFT'>;
+    valueFormatter?:WithDefault<string ,'largeValue'>;
+    axisDependency?:WithDefault<string,'LEFT'>;
 }
 export interface LineScatterCandleRadarConfig {
     drawVerticalHighlightIndicator?: boolean ;
@@ -177,16 +178,7 @@ interface fillFradientType {
     colors?: Color[] ;
     positions?: Float[] ;
     angle?: Float ;
-    orientation?:WithDefault<"TOP_BOTTOM"
-    | "TR_BL"
-    | "RIGHT_LEFT"
-    | "BR_TL"
-    | "BOTTOM_TOP"
-    | "BL_TR"
-    | "LEFT_RIGHT"
-    | "TL_BR",'TOP_BOTTOM'>
-       
-        ;
+    orientation?:WithDefault<string,'TOP_BOTTOM'>;
 }
 export interface LineRadarConfig {
     fillGradient?:fillFradientType
@@ -225,7 +217,7 @@ export interface yAxis extends Axis {
     spaceTop?: Float ;
     spaceBottom?: Float ;
 
-    position?: WithDefault<"OUTSIDE_CHART" | "INSIDE_CHART",'OUTSID_CHART'> ;
+    position?: WithDefault<string,'OUTSIDE_CHART'> ;
 
     maxWidth?: Float ;
     minWidth?: Float ;

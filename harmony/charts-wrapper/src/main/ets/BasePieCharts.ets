@@ -23,7 +23,7 @@
  */
 
 import { PieChartModel, RadarChartModel, } from '@ohos/mpchart';
-import { RNC } from "@rnoh/react-native-openharmony/generated"
+import { RNC } from './generated'
 
 type model = PieChartModel | RadarChartModel
 type RNChart = RNC.RNPieChart.DescriptorWrapper | RNC.RNRadarChart.DescriptorWrapper

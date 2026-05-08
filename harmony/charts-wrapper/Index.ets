@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
+import { ChartsWrapperPackage } from './src/main/ets/ChartsWrapperPackage'
 export * from  './src/main/ets/BarCharts'
 export * from  './src/main/ets/LineCharts'
 export * from  './src/main/ets/HorizontalBarCharts'
@@ -31,3 +31,4 @@ export * from  './src/main/ets/RadarCharts'
 export * from  './src/main/ets/ScatterCharts'
 export * from  './src/main/ets/CandleStickCharts'
 export * from  './src/main/ets/CombinedCharts'
+export default ChartsWrapperPackage

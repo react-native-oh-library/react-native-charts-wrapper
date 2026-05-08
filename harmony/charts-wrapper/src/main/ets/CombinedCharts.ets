@@ -24,7 +24,7 @@
 
 import { RNComponentContext, RNViewBase } from '@rnoh/react-native-openharmony';
 import { CombinedChart, CombinedChartModel, CombinedData } from '@ohos/mpchart';
-import { RNC } from "@rnoh/react-native-openharmony/generated"
+import { RNC } from './generated'
 import { setBaseProps } from './BaseCharts'
 import { setBarLineChart } from './BarLineBaseChart'
 import { setBarData } from './Data/BarData';

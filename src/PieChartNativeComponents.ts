@@ -1,5 +1,6 @@
 import {
-    HostComponent,ViewProps
+    HostComponent,
+    ViewProps,
   } from "react-native";
 import { Float, WithDefault } from "react-native/Libraries/Types/CodegenTypes";
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
@@ -28,12 +29,12 @@ export interface ChartLegend {
     fontWeight?: Float;
     wordWrapEnabled?: boolean;
     maxSizePercent?: Float;
-    horizontalAlignment?:WithDefault<"LEFT" | "CENTER" | "RIGHT",'LEFT'> ;
-    verticalAlignment?:WithDefault<"TOP" | "CENTER" | "BOTTOM",'TOP'>;
-    orientation?:WithDefault<"HORIZONTAL" | "VERTICAL","HORIZONTAL"> ;
+    horizontalAlignment?:WithDefault<string,'LEFT'> ;
+    verticalAlignment?:WithDefault<string,'TOP'>;
+    orientation?:WithDefault<string,"HORIZONTAL"> ;
     drawInside?: boolean;
-    direction?: WithDefault<"LEFT_TO_RIGHT" | "RIGHT_TO_LEFT",'LEFT_TO_RIGHT'>;
-    form?:WithDefault<"NONE" | "EMPTY" | "DEFAULT" | "SQUARE" | "CIRCLE" | "LINE","NONE"> ;
+    direction?: WithDefault<string,'LEFT_TO_RIGHT'>;
+    form?:WithDefault<string,"NONE"> ;
     formSize?: Float;
     xEntrySpace?: Float;
     yEntrySpace?: Float;
@@ -57,7 +58,7 @@ export interface AxisLimitLine {
     lineWidth?: Float;
     valueTextColor?: Color;
     valueFont?: Float;
-    labelPosition?:WithDefault<"LEFT_TOP" | "LEFT_BOTTOM" | "RIGHT_TOP" | "RIGHT_BOTTOM",'LEFT_TOP'> ;
+    labelPosition?:WithDefault<string ,'LEFT_TOP'> ;
     lineDashPhase?: Float;
     lineDashLengths?: Float[];
 }
@@ -95,14 +96,14 @@ export interface Axis {
 
     valueFormatterPattern?: string;
     since?: Float;
-    timeUnit?:WithDefault<"MILLISECONDS" | "SECONDS" | "MINUTES" | "HOURS" | "DAYS",'MILLISECONDS'> ;
+    timeUnit?:WithDefault<string,'MILLISECONDS'> ;
 }
 
 
 export interface xAxis extends Axis {
     labelRotationAngle?: Float;
     avoidFirstLastClipping?: boolean;
-    position?:WithDefault<"TOP" | "BOTTOM" | "BOTH_SIDED" | "TOP_INSIDE" | "BOTTOM_INSIDE",'TOP'> ;
+    position?:WithDefault<string,'TOP'> ;
     yOffset?: Float;
 }
 interface markerType{
@@ -154,7 +155,7 @@ export interface PieRadarChartBase extends ChartBase {
 
 
 //data
-export type PieValuePosition = WithDefault<"INSIDE_SLICE" | "OUTSIDE_SLICE",'INSIDE_SLICE'>;
+export type PieValuePosition = WithDefault<string,'INSIDE_SLICE'>;
 
 export interface CommonDatasetConfig {
     color?: Color;
@@ -164,8 +165,8 @@ export interface CommonDatasetConfig {
     valueTextSize?: Float;
     valueTextColor?: Color;
     visible?: boolean;
-    valueFormatter?:WithDefault<"largeValue" | "percent" | "date",'largeValue'>;
-    axisDependency?:WithDefault< "LEFT" | "RIGHT",'LEFT'>;
+    valueFormatter?:WithDefault<string ,'largeValue'>;
+    axisDependency?:WithDefault<string,'LEFT'>;
 }
 export interface PieDatasetConfig extends CommonDatasetConfig {
     sliceSpace?: Float ;
@@ -195,7 +196,7 @@ export interface PieDataset extends Dataset {
 export interface PieData {
     dataSets?: PieDataset[] ;
 }
- type FontFamily = WithDefault<'sans-serif' | 'serif' | 'monospace','san-serif'>;
+ type FontFamily = WithDefault<string,'sans-serif'>;
 interface styledCenterTextType {
     text?: string ;
     color?: Color ;

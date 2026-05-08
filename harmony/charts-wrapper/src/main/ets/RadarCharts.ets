@@ -34,7 +34,7 @@ import {
   XAxis,
   XAxisPosition,
 } from '@ohos/mpchart';
-import { RNC } from "@rnoh/react-native-openharmony/generated"
+import { RNC } from './generated'
 import { setBaseProps } from './BaseCharts'
 import { setRadarData } from './Data/RadarData';
 import { setBasePieChartProps } from './BasePieCharts';
